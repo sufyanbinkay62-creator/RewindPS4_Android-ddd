@@ -34,7 +34,7 @@ jobs:
           go get github.com/elazarl/goproxy
           go get -tool golang.org/x/mobile/cmd/gobind
           go mod tidy
-          gomobile bind -target=android -o ../app/golang_aar/proxy.aar .
+          gomobile bind -target=android -androidapi=21 -o ../app/golang_aar/proxy.aar .
 
       - name: Make Gradle executable
         run: chmod +x gradlew
