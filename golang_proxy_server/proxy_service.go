@@ -66,7 +66,7 @@ func StartProxy(port string) {
 		StopProxy()
 	}
 
-	ip := ExternalIP()
+	
 	proxy := InitProxy()
 	address := "0.0.0.0:" + port
 
