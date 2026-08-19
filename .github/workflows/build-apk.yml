@@ -28,7 +28,7 @@ jobs:
           go install golang.org/x/mobile/cmd/gobind@latest
           gomobile init
 
-                  - name: Build proxy AAR
+      - name: Build proxy AAR
         working-directory: golang_proxy_server
         run: |
           go get -tool golang.org/x/mobile/cmd/gobind
@@ -46,3 +46,4 @@ jobs:
         with:
           name: RewindPS4-fixed
           path: app/build/outputs/apk/debug/app-debug.apk
+      
