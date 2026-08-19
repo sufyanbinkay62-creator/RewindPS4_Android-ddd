@@ -68,7 +68,7 @@ func StartProxy(port string) {
 
 	ip := ExternalIP()
 	proxy := InitProxy()
-	address := ip + ":" + port
+	address := "0.0.0.0:" + port
 
 	server = &http.Server{
 		Addr:    address,
