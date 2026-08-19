@@ -31,7 +31,9 @@ jobs:
       - name: Build proxy AAR
         working-directory: golang_proxy_server
         run: |
-          go get -tool golang.org/x/mobile/cmd/gobind
+          go mod init yurisa
+          go get github.com/elazarl/goproxy
+          go get golang.org/x/mobile
           go mod tidy
           gomobile bind -target=android -o ../app/golang_aar/proxy.aar .
 
@@ -46,4 +48,3 @@ jobs:
         with:
           name: RewindPS4-fixed
           path: app/build/outputs/apk/debug/app-debug.apk
-      
